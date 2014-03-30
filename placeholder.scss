@@ -1,5 +1,7 @@
 @import 'bourbon/bourbon';
-
+$visual-grid: true;
+$visual-grid-opacity: .1;
+$visual-grid-color: blue;
   
 @import 'neat/neat';
 @import 'bitters/bitters';  
@@ -14,26 +16,6 @@ body {
 header {
   @include span-columns(12);
 }
-
-.centered {
-  @include span-columns(10);
-  @include shift(1);
-}
-
-#graph {
-  @include span_columns(9);
-}
-#search {
-  @include span_columns(10);
-  padding-top: 25px;
-}
-
-#button {
-  @include button(simple, $base-accent-color);
-  -webkit-font-smoothing: antialiased;
-  font-size: $base-font-size;
-  font-weight: bold;
-  line-height: 1em;}
 
 #main-img {
   @include span-columns(10);
@@ -60,16 +42,6 @@ header {
   border-width:1px;
   text-align:center;
   background-color:silver;
-    a:link {
-      color: black;
-    }
-    a:visited {
-      color: black;
-    }
-    a:hover {
-      color: black;
-      font-weight: bold;
-    } 
 
   li {
   display: inline;
@@ -92,19 +64,22 @@ header {
     li.block {
       @include span-columns(6);  
       @include omega(2n);
-      
+      @include pad();
       border-style:solid;
       border-width:1px;
-      height:250px;
-
-      img {
-        @include span-columns(12);
-        height: 250px;
-      }
+      height:200px;
+     
     } 
   }
 }
 
+#graph {
+  @include span_columns(9);
+}
+#search {
+  @include span_columns(10);
+  padding-top: 25px;
+}
 
 
 #one-c{
