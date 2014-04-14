@@ -9,6 +9,8 @@ $visual-grid-color: blue;
 
 
 body {
+  @include background-image(url("/capitol_building.jpg"), linear-gradient(white 0, yellow 50%, transparent 50%));
+
   @include outer-container;
   background-color:whitesmoke;
 }
