@@ -67,7 +67,7 @@
 body {
   @include outer-container;
   @include clearfix;
-  background-image:url("../chamber.jpg");
+  background-image:url("../mock_images/chamber.jpg");
   box-shadow: 0px 0px 25px black;
   background-position: absolute;
   bottom: 5px;
